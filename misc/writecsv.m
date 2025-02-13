@@ -91,7 +91,7 @@ if(isempty(file))
     file=[path fs file];
 else
     % check file
-    if(~isstring(file))
+    if(~isstring_local(file))
         error('seizmo:writecsv:fileNotString',...
             'FILE must be a string!');
     end

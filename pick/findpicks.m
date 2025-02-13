@@ -53,7 +53,7 @@ error(seizmocheck(data));
 nrecs=numel(data);
 
 % check phaselist
-if(isstring(phaselist))
+if(isstring_local(phaselist))
     phaselist=getwords(phaselist,',');
 end
 if(~iscellstr(phaselist))

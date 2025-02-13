@@ -85,7 +85,7 @@ try
     cd(mypath);
     
     % current version
-    gshhg='gshhg-bin-2.2.4.zip';
+    gshhg='gshhg-bin-2.3.7.zip';
     
     % grab file
     url='ftp://ftp.soest.hawaii.edu/gshhg/';

@@ -57,7 +57,7 @@ nrecs=numel(data);
 
 % check phaselist
 if(nargin==1); phaselist=[]; end
-if(~isempty(phaselist) && ~isstring(phaselist) && ~iscellstr(phaselist))
+if(~isempty(phaselist) && ~isstring_local(phaselist) && ~iscellstr(phaselist))
     error('seizmo:arrivals2picks:badInput',...
         'PHASELIST must be a string like ''P'' or ''P,PP''!');
 end

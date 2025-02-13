@@ -54,7 +54,7 @@ error(nargchk(1,4,nargin));
 fs=filesep;
 
 % check input directory
-if(~isstring(indir))
+if(~isstring_local(indir))
     error('seizmo:noise_psdgram:fileNotString',...
         'INDIR must be a string!');
 end

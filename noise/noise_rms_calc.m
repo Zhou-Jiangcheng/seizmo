@@ -43,7 +43,7 @@ error(nargchk(1,1,nargin));
 fs=filesep;
 
 % check directory
-if(~isstring(indir))
+if(~isstring_local(indir))
     error('seizmo:noise_rms_calc:fileNotString',...
         'INDIR must be a string!');
 end

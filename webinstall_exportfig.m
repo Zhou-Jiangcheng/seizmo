@@ -73,7 +73,7 @@ try
     exportfig='export_fig.zip';
     
     % grab file
-    url='https://github.com/ojwoodford/export_fig/archive/master.zip';
+    url='https://codeload.github.com/ojwoodford/export_fig/zip/refs/heads/master';
     disp([' Getting ' exportfig]);
     if(exist(exportfig,'file'))
         if(~exist([mypath fs exportfig],'file'))

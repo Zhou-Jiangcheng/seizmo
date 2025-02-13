@@ -67,7 +67,7 @@ error(nargchk(1,3,nargin));
 fs=filesep;
 
 % handle directory input
-if(isstring(results))
+if(isstring_local(results))
     if(~isabspath(results)); results=[pwd fs results]; end
     if(isdir(results))
         files=xdir([results fs '*.mat']);
@@ -88,10 +88,10 @@ if(nargin<3 || isempty(figdir)); figdir=odir; end
 if(islogical(figdir) && isscalar(figdir) && figdir); figdir='.'; end
 
 % check odir & figdir
-if(~isstring(odir) && ~(islogical(odir) && isscalar(odir)))
+if(~isstring_local(odir) && ~(islogical(odir) && isscalar(odir)))
     error('seizmo:cmb_clustering:badInput',...
         'ODIR must be a string or TRUE/FALSE!');
-elseif(~isstring(figdir) && ~(islogical(figdir) && isscalar(figdir)))
+elseif(~isstring_local(figdir) && ~(islogical(figdir) && isscalar(figdir)))
     error('seizmo:cmb_clustering:badInput',...
         'FIGDIR must be a string or TRUE/FALSE!');
 end

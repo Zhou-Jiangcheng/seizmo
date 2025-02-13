@@ -85,7 +85,7 @@ for i=1:numel(ax)
             
             % set visibility
             set(hflag,'visible',lgc);
-        elseif(isstring(lgc) && any(strcmpi(lgc,{'on' 'off'})))
+        elseif(isstring_local(lgc) && any(strcmpi(lgc,{'on' 'off'})))
             % set visibility
             set(hflag,'visible',lgc);
         else

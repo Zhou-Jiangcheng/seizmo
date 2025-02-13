@@ -1,9 +1,9 @@
-function [x]=vecnorm(x,dim,p)
+function [x]=vecnorm_local(x,dim,p)
 %VECNORM    Returns vector norms
 %
-%    Usage:    m=vecnorm(x)
-%              m=vecnorm(x,dim)
-%              m=vecnorm(x,dim,p)
+%    Usage:    m=vecnorm_local(x)
+%              m=vecnorm_local(x,dim)
+%              m=vecnorm_local(x,dim,p)
 %
 %    Description:
 %     M=VECNORM(X) returns the vector L2 norms for X down its first
@@ -26,8 +26,8 @@ function [x]=vecnorm(x,dim,p)
 %
 %    Examples:
 %     % Show the L2 norms of each row and column for a matrix:
-%     vecnorm(magic(5),1)
-%     vecnorm(magic(5),2)
+%     vecnorm_local(magic(5),1)
+%     vecnorm_local(magic(5),2)
 %
 %    See also: NORM
 
@@ -43,7 +43,7 @@ function [x]=vecnorm(x,dim,p)
 
 % check x
 if(~isnumeric(x))
-    error('seizmo:vecnorm:badX','X must be a numeric array!');
+    error('seizmo:vecnorm_local:badX','X must be a numeric array!');
 end
 
 % default dimension
@@ -54,7 +54,7 @@ end
 
 % check dimension
 if(~isscalar(dim) || dim~=fix(dim))
-    error('seizmo:vecnorm:badDim','DIM must be a scalar integer!');
+    error('seizmo:vecnorm_local:badDim','DIM must be a scalar integer!');
 end
 
 % default norm length
@@ -62,7 +62,7 @@ if(nargin<3 || isempty(p)); p=2; end
 
 % check norm length
 if(~isscalar(p) || ~isreal(p))
-    error('seizmo:vecnorm:badP','P must be a scalar real!');
+    error('seizmo:vecnorm_local:badP','P must be a scalar real!');
 end
 
 % get norm

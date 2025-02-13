@@ -138,7 +138,7 @@ fs=filesep;
 opt=noise_setup_parameters(varargin{:});
 
 % check directories
-if(~isstring(indir))
+if(~isstring_local(indir))
     error('seizmo:noise_setup:fileNotString',...
         'INDIR must be a string!');
 end
@@ -148,7 +148,7 @@ if(~exist(indir,'dir') && ~any(indir=='*')) % allow wildcards
         ['Input Directory: %s\n' ...
         'Does not exist (or is not a directory)!'],indir);
 end
-if(~isstring(outdir))
+if(~isstring_local(outdir))
     error('seizmo:noise_setup:fileNotString',...
         'OUTDIR must be a string!');
 end

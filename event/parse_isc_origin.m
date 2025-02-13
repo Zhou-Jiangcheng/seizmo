@@ -83,7 +83,7 @@ if(~flag)
         '*.*' 'All Files (*.*)'});
 else
     % just copy file to txt
-    if(nargin<1 || isempty(file) || ~isstring(file))
+    if(nargin<1 || isempty(file) || ~isstring_local(file))
         error('seizmo:parse_isc_origin:emptyStr',...
             'STRING must be non-empty!');
     else
