@@ -25,7 +25,7 @@ unzip njToolbox-2.0.zip
 cd ..
 
 # get m_map
-wget http://www.eos.ubc.ca/%7Erich/m_map1.4.zip
+wget http://www-old.eos.ubc.ca/%7Erich/m_map1.4.zip
 unzip m_map1.4.zip
 
 # get irisws
