@@ -54,8 +54,7 @@ unzip seizmo_mapping_features.zip
 mkdir -p export_fig
 cd export_fig
 wget https://codeload.github.com/ojwoodford/export_fig/zip/refs/heads/master
-unzip export_fig-master.zip
-mv export_fig-master/* ./
-rm -rf export_fig-master
-mv export_fig-master.zip ..
+mv master export_fig.zip
+unzip export_fig.zip
+mv export_fig.zip ..
 cd ..
